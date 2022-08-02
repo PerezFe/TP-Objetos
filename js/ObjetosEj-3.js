@@ -3,7 +3,18 @@ class Rectangulos{
         this.altura=altura,
         this.ancho=ancho
     }
-   
+    get mostrarAltura(){
+        return this.altura
+    }
+    get mostrarAcho(){
+        return this.ancho
+    }
+    set modificarAltura(nuevaAltura){
+        this.altura = nuevaAltura
+    }
+    set modificarAncho(nuevoAncho){
+        this.ancho = nuevoAncho
+    }
     calcPerimetro(altura, ancho){
         let p = 2*(altura+ancho)
         

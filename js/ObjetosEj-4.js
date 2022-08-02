@@ -7,6 +7,24 @@ class Producto {
     informacion(){
         document.write(`Codigo: ${this.codigo} <br> Nombre ${this.nombre}<br>Precio $${this.precio}`)
     }
+    set modificarCodigo(nuevoCodigo){
+        this.codigo = nuevoCodigo
+    }
+    set modificarNombre(nuevoNombre){
+        this.nombre = nuevoNombre
+    }
+    set modificarPrecio(nuevoPrecio){
+        this.precio = nuevoPrecio
+    }
+    get mostrarCodigo(){
+        return this.codigo;
+    }
+    get mostrarNombre(){
+        return this.nombre;
+    }
+    get mostrarPrecio(){
+        return this.precio;
+    }
 }
 
 let product1 = new Producto(456329, "televisor Samsung", 600)
