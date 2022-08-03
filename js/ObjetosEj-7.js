@@ -1,4 +1,4 @@
-class Contacto{
+class Agenda{
 constructor(nombre, telefono){
     this.nombre=nombre,
     this.telefono=telefono
@@ -23,7 +23,7 @@ get mostrarAgenda(){
     return this.agenda;
 }
 
-aniadirContacto(nuevoContacto, nuevoTelefono){
+aniadirContacto(nuevoContacto){
     if ( this.agenda.includes( nuevoContacto ) ) {
         document.write(`<br>El usuario ${nuevoContacto} ya existe en su lista de contactos`)
         
@@ -45,9 +45,18 @@ listarContactos(){
         document.write(`${this.agenda[i]}<br>`)         
     }
 }  
-buscarContacto(nombre){}
+buscarContacto(nombre){
+    if ( this.agenda.includes( nombre ) ) {
+        /* OK, value exists! */
+        document.write(`<br>${nombre}`)
+    }
+}
 eliminarContacto(Contacto, nombre){}
-agendaLlena(){}
+agendaLlena(){
+    if(this.agenda.length=10){
+        document.write("Su agenda esta Llena")
+    }
+}
 huecosLibres(){
     let resultado = this.cantidadContactos - this.agenda.length
     document.write(`Cantidad de Contactos disponibles ${resultado}`)
@@ -56,3 +65,5 @@ huecosLibres(){
 }
 
 let contacto1 = new Contacto("Roberto", 154625389)
+
+
